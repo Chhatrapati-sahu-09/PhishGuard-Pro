@@ -1,228 +1,235 @@
-PhishGuard Pro – AI-Powered Phishing URL Detector
+# PhishGuard Pro – AI-Powered Phishing URL Detector
 
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)
+![PyQt5](https://img.shields.io/badge/UI-PyQt5-green)
+![Machine Learning](https://img.shields.io/badge/ML-Scikit--Learn-orange)
+![Security](https://img.shields.io/badge/Cybersecurity-Phishing%20Detection-red)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
+A **modern dark-themed desktop application** for **real-time phishing URL detection** that combines **Machine Learning, heuristic analysis, and threat-intelligence APIs** with professional analytics and reporting.
 
+---
 
+# Overview
 
+**PhishGuard Pro** is an intelligent phishing detection tool designed to analyze suspicious URLs using a **multi-layered security approach**.
 
+### Detection Layers
+- **Machine Learning** (TF-IDF + Logistic Regression)
+- **Heuristic Rule-Based Analysis**
+- **Threat Intelligence APIs**
+- **SSL and WHOIS Domain Validation**
+- **Real-Time Analytics Dashboard**
 
+The application includes a **modern PyQt5 desktop interface**, interactive visualizations, scan history tracking, and exportable reports.
 
+It is suitable for **cybersecurity learning, demonstrations, and hackathons**.
 
+---
 
+# Key Features
 
-
-A modern dark-themed desktop application for real-time phishing URL detection that combines Machine Learning, heuristic analysis, and threat-intelligence APIs with professional analytics and reporting.
-
-Overview
-
-PhishGuard Pro is an intelligent phishing detection tool designed to analyze suspicious URLs using a multi-layered security approach.
-
-Detection Layers
-
-Machine Learning (TF-IDF + Logistic Regression)
-
-Heuristic Rule-Based Analysis
-
-Threat Intelligence APIs
-
-SSL and WHOIS Domain Validation
-
-Real-Time Analytics Dashboard
-
-The application includes a modern PyQt5 desktop interface, interactive visualizations, scan history tracking, and exportable reports.
-It is suitable for cybersecurity learning, demonstrations, and hackathons.
-
-Key Features
-URL Analysis Engine
+## URL Analysis Engine
 
 The core analysis engine evaluates URLs using multiple techniques.
 
-Machine Learning
+### Machine Learning
+- Character-level **TF-IDF feature extraction**
+- **Logistic Regression classifier**
+- Fast and lightweight prediction model
 
-Character-level TF-IDF feature extraction
-
-Logistic Regression classifier
-
-Fast and lightweight prediction model
-
-Heuristic Security Checks
+### Heuristic Security Checks
 
 The system performs rule-based checks such as:
 
-IP address usage inside URL
+- IP address usage inside URL  
+- Presence of `@` symbol  
+- Excessive URL length  
+- Suspicious tokens  
+- Multiple subdomains  
+- Unsafe TLD detection  
+- Missing HTTPS protocol  
+- Invalid SSL certificate  
+- Domain age verification using WHOIS  
 
-Presence of @ symbol
-
-Excessive URL length
-
-Suspicious tokens
-
-Multiple subdomains
-
-Unsafe TLD detection
-
-Missing HTTPS protocol
-
-Invalid SSL certificate
-
-Domain age verification using WHOIS
-
-Threat Intelligence Integration
+### Threat Intelligence Integration
 
 External threat intelligence sources improve detection reliability:
 
-VirusTotal API for URL reputation
+- **VirusTotal API** for URL reputation
+- **Google Safe Browsing API** for threat verification
 
-Google Safe Browsing API for threat verification
+---
 
-Analytics Dashboard
+# Analytics Dashboard
 
 The application includes a real-time analytics panel that provides visual insights into scan results.
 
 Features include:
 
-Histogram showing risk score distribution
+- Histogram showing risk score distribution
+- Pie chart displaying phishing vs safe URL ratio
+- Mean risk score indicator
+- Color-coded phishing severity levels
 
-Pie chart displaying phishing vs safe URL ratio
+---
 
-Mean risk score indicator
+# PyQt5 Desktop Interface
 
-Color-coded phishing severity levels
-
-These analytics help users quickly understand the overall risk profile of scanned URLs.
-
-PyQt5 Desktop Interface
-
-The application features a professional dark-themed GUI built using PyQt5.
+The application features a **professional dark-themed GUI** built using **PyQt5**.
 
 UI Features:
 
-Clean and modern layout
+- Clean and modern layout
+- Card-based interface design
+- Smooth gradient styling
+- Animated progress bar
+- Real-time scan status updates
+- User-friendly interaction flow
 
-Card-based interface design
+---
 
-Smooth gradient styling
-
-Animated progress bar
-
-Real-time scan status updates
-
-User-friendly interaction flow
-
-Reports and History
+# Reports and History
 
 PhishGuard Pro stores scan results and allows exporting data for analysis.
 
 Capabilities include:
 
-Detailed phishing scan reports
+- Detailed phishing scan reports
+- Session history table
+- Export reports as **HTML**
+- Export session history as **CSV**
 
-Session history table
+---
 
-Export reports as HTML
+# Demo Mode (Hackathon Friendly)
 
-Export session history as CSV
-
-These reports are useful for security demonstrations, documentation, and presentations.
-
-Demo Mode (Hackathon Friendly)
-
-The tool includes a built-in demo mode designed for presentations and offline usage.
+The tool includes a built-in **demo mode** designed for presentations and offline usage.
 
 Features of demo mode:
 
-Auto-generated phishing dataset
+- Auto-generated phishing dataset
+- Offline machine learning training
+- No external API dependency required
+- Ideal for hackathons and cybersecurity demos
 
-Offline machine learning training
+---
 
-No external API dependency required
+# Detection Architecture
 
-Ideal for hackathons and cybersecurity demos
+PhishGuard Pro follows a **three-layer security architecture**.
 
-Detection Architecture
-
-PhishGuard Pro follows a three-layer security architecture.
-
-Layer 1 – Heuristic Analysis
+## Layer 1 – Heuristic Analysis
 
 Rule-based checks analyze structural properties of URLs.
 
 Checks include:
 
-IP address detection
+- IP address detection
+- `@` symbol presence
+- Long URLs
+- Suspicious tokens
+- Multiple subdomains
+- Unsafe TLDs
+- Missing HTTPS
+- SSL certificate validity
+- Domain age verification
 
-@ symbol presence
+---
 
-Long URLs
+## Layer 2 – Machine Learning Detection
 
-Suspicious tokens
+1. URLs are converted into **character-level TF-IDF vectors**.  
+2. The feature vectors are passed into a **Logistic Regression classifier**.  
+3. The model predicts a **phishing probability score**.
 
-Multiple subdomains
+This layer enables **fast and scalable detection**.
 
-Unsafe TLDs
+---
 
-Missing HTTPS
-
-SSL certificate validity
-
-Domain age verification
-
-Layer 2 – Machine Learning Detection
-
-URLs are converted into character-level TF-IDF vectors.
-
-The feature vectors are passed into a Logistic Regression classifier.
-
-The model predicts a phishing probability score.
-
-This layer enables fast and scalable detection.
-
-Layer 3 – Threat Intelligence
+## Layer 3 – Threat Intelligence
 
 To strengthen results, external threat intelligence services are used.
 
-VirusTotal provides reputation analysis from multiple security vendors.
+- **VirusTotal** provides reputation analysis from multiple security vendors.
+- **Google Safe Browsing** detects known malicious or phishing domains.
 
-Google Safe Browsing detects known malicious or phishing domains.
+This layer increases **accuracy and credibility of results**.
 
-This layer increases accuracy and credibility of results.
+---
 
-Technology Stack
-Component	Technology
-Programming Language	Python
-Desktop UI	PyQt5
-Machine Learning	Scikit-Learn
-Feature Extraction	TF-IDF
-Data Processing	Pandas
-Visualization	Matplotlib
-Domain Lookup	python-whois
-Domain Parsing	tldextract
-HTTP Requests	Requests
-Model Storage	Joblib
-Installation
-1. Clone the Repository
+# Technology Stack
+
+| Component | Technology |
+|----------|------------|
+| Programming Language | Python |
+| Desktop UI | PyQt5 |
+| Machine Learning | Scikit-Learn |
+| Feature Extraction | TF-IDF |
+| Data Processing | Pandas |
+| Visualization | Matplotlib |
+| Domain Lookup | python-whois |
+| Domain Parsing | tldextract |
+| HTTP Requests | Requests |
+| Model Storage | Joblib |
+
+---
+
+# Installation
+
+## 1. Clone the Repository
+
+```bash
 git clone https://github.com/Chhatrapati-sahu-09/PhishGuard-Pro.git
 cd PhishGuard-Pro
-2. Create Virtual Environment (Recommended)
+```
+
+---
+
+## 2. Create Virtual Environment (Recommended)
+
+```bash
 python -m venv venv
+```
 
 Activate environment
 
-Windows
+### Windows
 
+```bash
 venv\Scripts\activate
+```
 
-Mac/Linux
+### Mac / Linux
 
+```bash
 source venv/bin/activate
-3. Install Dependencies
+```
+
+---
+
+## 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-Running the Application
+```
+
+---
+
+# Running the Application
+
+```bash
 python main.py
+```
 
-The application will launch the PhishGuard Pro desktop interface.
+The application will launch the **PhishGuard Pro desktop interface**.
 
-Project Structure
+---
+
+# Project Structure
+
+```
 PhishGuard-Pro
 │
 ├── main.py
@@ -246,20 +253,32 @@ PhishGuard-Pro
 │   └── demo_dataset.csv
 │
 └── requirements.txt
-Use Cases
+```
+
+---
+
+# Use Cases
 
 PhishGuard Pro can be used for:
 
-Cybersecurity project demonstrations
+- Cybersecurity project demonstrations
+- Hackathons and research prototypes
+- Phishing detection experiments
+- Security awareness presentations
+- Machine learning security projects
 
-Hackathons and research prototypes
+---
 
-Phishing detection experiments
+# License
 
-Security awareness presentations
+This project is licensed under the **MIT License**.
 
-Machine learning security projects
+---
 
-License
+# Author
 
-This project is licensed under the MIT License.
+**Chhatrapati Sahu**
+
+Portfolio: https://www.chhatrapatisahu.me  
+GitHub: https://github.com/Chhatrapati-sahu-09  
+LinkedIn: https://www.linkedin.com/in/chhatrpati-sahu-4b803130a/
